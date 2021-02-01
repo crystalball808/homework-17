@@ -1,6 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-import Timer from './Timer.js';
+import Timer from './components/Timer.js';
 
 function App() {
   return (

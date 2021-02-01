@@ -19,7 +19,12 @@ class Timer extends React.Component{
             progressBar: (this.state.time - this.state.step)/this.props.time*100
         })
         if (this.props.onTick){
-            this.props.onTick.call(this,this.state.time);
+            if (this.state.time > 0){
+                this.props.onTick.call(this,this.state.time);
+            }
+            else {
+                this.props.onTick.call(this,0);
+            }
         }
     }
 
